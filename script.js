@@ -75,7 +75,7 @@ form.addEventListener("submit", (e) => {
     monthInput.closest(".input-wrapper").classList.remove("error-invalid");
   }
 
-  if (isNaN(year) || year < 1000 || year > new Date().getFullYear()) {
+  if (isNaN(year) || year < 1000) {
     yearInput.closest(".input-wrapper").classList.add("error-invalid");
     yearInput.value = "";
     focus(yearInput);
