@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <main class="container">
+      <form action="#" class="form">
+        <div class="input-wrapper">
+          <label for="day">Day</label>
+          <input type="text" name="day" id="day" placeholder="DD" />
+          <p class="error-msg">Must be a valid day</p>
+          <p class="required-field">This field is required</p>
+          <p class="error-past-msg">Must be in the past</p>
+        </div>
+        <div class="input-wrapper">
+          <label for="month">Month</label>
+          <input type="text" name="month" id="month" placeholder="MM" />
+          <p class="error-msg">Must be a valid month</p>
+          <p class="required-field">This field is required</p>
+          <p class="error-past-msg">Must be in the past</p>
+        </div>
+        <div class="input-wrapper">
+          <label for="year">Year</label>
+          <input type="text" name="year" id="year" placeholder="YYYY" />
+          <p class="error-msg">Must be a valid year</p>
+          <p class="required-field">This field is required</p>
+          <p class="error-past-msg">Must be in the past</p>
+        </div>
+        <button class="arrow-container" type="submit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </button>
+      </form>
+      <div class="age-overview">
+        <p class="age age-years"><span>- -</span> years</p>
+        <p class="age age-months"><span>- -</span> months</p>
+        <p class="age age-days"><span>- -</span> days</p>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
