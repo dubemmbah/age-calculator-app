@@ -209,7 +209,7 @@ body {
   }
 
   .error-msg,
-  .required-field {
+  .required-field, .error-past-msg {
     font-size: 1.3rem;
   }
 }
@@ -285,7 +285,7 @@ body {
   }
 
   .error-msg,
-  .required-field {
+  .required-field, .error-past-msg {
     font-size: 0.9rem;
   }
 
