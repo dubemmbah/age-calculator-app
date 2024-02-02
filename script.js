@@ -50,8 +50,8 @@ form.addEventListener("submit", (e) => {
   const month = parseInt(monthInput.value);
   const year = parseInt(yearInput.value);
 
-  let hasInvalidInput = false;
 
+  let hasInvalidInput = false;
   //   Validate input fields
   if (isNaN(day) || day < 1 || day > 31) {
     dayInput.closest(".input-wrapper").classList.add("error-invalid");
@@ -128,7 +128,6 @@ form.addEventListener("submit", (e) => {
   const wholeDaysInCurrentMonth = Math.floor(remainingDaysInCurrentMonth);
 
   //   Display age in years, months & days
-
   ageOverview.innerHTML = `
         <p class="age age-years"><span>${wholeYears}</span> years</p>
         <p class="age age-months"><span>${wholeMonths}</span> months</p>
