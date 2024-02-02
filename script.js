@@ -50,10 +50,12 @@ form.addEventListener("submit", (e) => {
   const month = parseInt(monthInput.value);
   const year = parseInt(yearInput.value);
 
-
+  // Determine number of days in current month
+  const daysInMonth = new Date(year, month, 0).getDate(); // to determine the number of days in the current month. JS represents months using zero-based indexing and so, the date constructor function when 0 is passed in as an argument for day to it, it returns the number of days that the previous month has in total.
+  
   let hasInvalidInput = false;
   //   Validate input fields
-  if (isNaN(day) || day < 1 || day > 31) {
+  if (isNaN(day) || day < 1 || day > 31 || day > daysInMonth) {
     dayInput.closest(".input-wrapper").classList.add("error-invalid");
     focus(dayInput);
     hasInvalidInput = true;
