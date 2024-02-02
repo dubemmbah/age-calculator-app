@@ -12,7 +12,7 @@ This Age Calculator is a JavaScript-based web application that allows users to c
 ## Usage
 Clone the repository:
 
-+ git clone https://github.com/your-username/age-calculator.git
++ git clone https://github.com/dubemmbah/age-calculator-app.git
 + Open the index.html file in your web browser.
 + Enter your date of birth in the input fields provided.
 + Your age will be calculated and displayed in years, months, and days.
