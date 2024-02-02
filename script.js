@@ -57,6 +57,7 @@ form.addEventListener("submit", (e) => {
   //   Validate input fields
   if (isNaN(day) || day < 1 || day > 31 || day > daysInMonth) {
     dayInput.closest(".input-wrapper").classList.add("error-invalid");
+    dayInput.value = "";
     focus(dayInput);
     hasInvalidInput = true;
     resetAgeOverview();
@@ -66,6 +67,7 @@ form.addEventListener("submit", (e) => {
 
   if (isNaN(month) || month < 1 || month > 12) {
     monthInput.closest(".input-wrapper").classList.add("error-invalid");
+    monthInput.value = "";
     focus(monthInput);
     hasInvalidInput = true;
     resetAgeOverview();
@@ -75,6 +77,7 @@ form.addEventListener("submit", (e) => {
 
   if (isNaN(year) || year < 1000 || year > new Date().getFullYear()) {
     yearInput.closest(".input-wrapper").classList.add("error-invalid");
+    yearInput.value = "";
     focus(yearInput);
     hasInvalidInput = true;
     resetAgeOverview();
