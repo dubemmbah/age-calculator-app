@@ -1,4 +1,4 @@
-#Age Calculator App
+# Age Calculator App
 
 ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
 
