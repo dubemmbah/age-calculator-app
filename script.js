@@ -52,7 +52,7 @@ form.addEventListener("submit", (e) => {
 
   // Determine number of days in current month
   const daysInMonth = new Date(year, month, 0).getDate(); // to determine the number of days in the current month. JS represents months using zero-based indexing and so, the date constructor function when 0 is passed in as an argument for day to it, it returns the number of days that the previous month has in total.
-  
+
   let hasInvalidInput = false;
   //   Validate input fields
   if (isNaN(day) || day < 1 || day > 31 || day > daysInMonth) {
@@ -139,11 +139,18 @@ form.addEventListener("submit", (e) => {
         <p class="age age-days"><span>${wholeDaysInCurrentMonth}</span> days</p>
   `;
 
+  animateAges();
+
   // Blur input fields (remove focus)
   dayInput.blur();
   monthInput.blur();
   yearInput.blur();
 });
+
+function animateAges() {
+  const ages = document.querySelectorAll(".age");
+  ages.forEach((age) => (age.style.opacity = 1));
+}
 
 function resetAgeOverview() {
   ageOverview.innerHTML = `

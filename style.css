@@ -184,6 +184,8 @@ body {
   font-weight: 800;
   font-style: italic;
   letter-spacing: -3px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 
 .age span {
@@ -209,7 +211,8 @@ body {
   }
 
   .error-msg,
-  .required-field, .error-past-msg {
+  .required-field,
+  .error-past-msg {
     font-size: 1.3rem;
   }
 }
@@ -285,7 +288,8 @@ body {
   }
 
   .error-msg,
-  .required-field, .error-past-msg {
+  .required-field,
+  .error-past-msg {
     font-size: 0.9rem;
   }
 
@@ -305,5 +309,15 @@ body {
 
   .input-wrapper input {
     padding: 0.8rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
