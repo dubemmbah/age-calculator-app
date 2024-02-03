@@ -132,6 +132,44 @@ form.addEventListener("submit", (e) => {
   );
   const wholeDaysInCurrentMonth = Math.floor(remainingDaysInCurrentMonth);
 
+  let yearsCounter = 0;
+  let monthsCounter = 0;
+  let daysCounter = 0;
+
+  let intervalDuration = 30;
+  let maxYears = 100;
+
+  const interval = setInterval(() => {
+    // Increment years counter
+    if (yearsCounter <= wholeYears) {
+      document.querySelector(".age-years span").textContent = yearsCounter++;
+    }
+    // This basically checks to see that the yearsCounter is less than or equal to the age of the user and keeps increasing the age until the counter is at the age. So, it does all of this within 20 milliseconds to effect the animation and when the yearsCounter > wholeYears, the interval is cleared
+
+    if (monthsCounter <= wholeMonths) {
+      document.querySelector(".age-months span").textContent = monthsCounter++;
+    }
+
+    if (daysCounter <= wholeDaysInCurrentMonth) {
+      document.querySelector(".age-days span").textContent = daysCounter++;
+    }
+
+    // Progress based on the current years counter and maximum years
+    const progress = yearsCounter / maxYears;
+
+    // Adjusting the interval duration based on the progress
+    intervalDuration = 50 + (1 - progress) * 1;
+
+    // Clear interval when counters reach their final values
+    if (
+      yearsCounter > wholeYears &&
+      monthsCounter > wholeMonths &&
+      daysCounter > wholeDaysInCurrentMonth
+    ) {
+      clearInterval(interval);
+    }
+  }, intervalDuration); // Adjust the interval duration for desired animation speed
+
   //   Display age in years, months & days
   ageOverview.innerHTML = `
         <p class="age age-years"><span>${wholeYears}</span> years</p>
@@ -139,18 +177,16 @@ form.addEventListener("submit", (e) => {
         <p class="age age-days"><span>${wholeDaysInCurrentMonth}</span> days</p>
   `;
 
-  animateAges();
-
   // Blur input fields (remove focus)
   dayInput.blur();
   monthInput.blur();
   yearInput.blur();
 });
 
-function animateAges() {
-  const ages = document.querySelectorAll(".age");
-  ages.forEach((age) => (age.style.opacity = 1));
-}
+// function animateAges() {
+//   const ages = document.querySelectorAll(".age");
+//   ages.forEach((age) => (age.style.opacity = 1));
+// }
 
 function resetAgeOverview() {
   ageOverview.innerHTML = `

@@ -184,8 +184,8 @@ body {
   font-weight: 800;
   font-style: italic;
   letter-spacing: -3px;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
+  /* opacity: 0;
+  animation: fadeIn 0.5s forwards; */
 }
 
 .age span {
