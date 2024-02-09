@@ -215,4 +215,3 @@ function focus(input) {
 //   dayInput.value = monthInput.value = yearInput.value = "";
 // }
 
-// resetCalculator();
